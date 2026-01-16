@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Approval Prediction</title>
+</head>
+<body>
+    <h2>Text Approval Prediction</h2>
+
+    <form action="/predict" method="post">
+        <textarea name="text" rows="4" cols="60"
+        placeholder="Enter Bangla / English / Romanized Bangla"></textarea><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h3>{{ prediction }}</h3>
+        <p><b>Detected Language:</b> {{ language }}</p>
+    {% endif %}
+</body>
+</html>
